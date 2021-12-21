@@ -4,48 +4,46 @@
     <meta charset="utf-8">
     <title>Web Paint!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
 <body>
-    <h1 style="margin: 0;">My own paint</h1>
-    <p style="margin: 0; margin-bottom: 3px;">Draw anything you want! enjoy it~~</p>
-    <div style="display: flex;">
-        <canvas id="draw"  width="200" height="200" style="border:1px solid #d3d3d3; margin-right: 20px; margin-top: 5px;">
+    <h1>My own paint</h1>
+    <p>Draw anything you want! Enjoy it~~</p>
+    <div id="bigest">
+        <canvas id="draw" width="200" height="200">
             Your browser does not support the HTML canvas tag.
         </canvas>
         <script src="all.js"></script>
         
         <div>
             <div>
-                <h3 style="margin-top: 0;">1. First step "set background color!"</h3>
+                <h3>1. First step "set background color!"</h3>
                 <h4>Remember to set background color first or your things will be covered!</h4>
                 background color : <input id="bgColor" type="color" value="#ffffff">
                 <input type="button" value="set background color" onclick="backgroundColor()">
             </div>
             <br>
             <div>
-                <h3 style="margin-top: 0;">2. Second step "choose the size & the color of the pen"</h3>
+                <h3>2. Second step "choose the size & the color of the pen"</h3>
                 size : <input id="s" type="range" min="0" max="20">
                 <br>
                 <h4>Pick a color you like! And start to paint~~</h4>
                 <input type="radio" id="type" name="type" value="pen" onclick="submit()" checked> pen
                 color : <input id="c"type="color" value="#000000">
                 <br>
-                <h4 style="margin-top: 8px; margin-bottom: 5px;">Want to change somethig?    Try to use the eraser!</h4>
+                <h4>Want to change somethig?    Try to use the eraser!</h4>
                 <input type="radio" id="type" name="type" value="eraser" onclick="submit()"> eraser
             </div>
             <br>
             <div>
-                <h3 style="margin-top: 0;">3. Final step!!</h3>
-                <h4 style="margin-top: 8px; margin-bottom: 5px;">Like your paint? Save it!! Don't like it? Press the button and try again!</h4>
-                <button><a href="#" download="image.jpeg" onclick="this.href=canvas.toDataURL();" style="text-decoration:none; color: black;">download as jpeg</a></button>
-                <h4 style="margin-top: 8px; margin-bottom: 5px;">Don't like it? Press the button and try again!</h4>
+                <h3>3. Final step!!</h3>
+                <h4>Like your paint? Save it!! Don't like it? Press the button and try again!</h4>
+                <button><a href="#" download="image.jpeg" onclick="this.href=canvas.toDataURL();">download as jpeg</a></button>
+                <h4>Don't like it? Press the button and try again!</h4>
                 <input type ="button" value ="clean the canvas" onclick ="clean()">
-            </div>
-                
+            </div>   
         </div> 
-    
-        
     </div>
 </body>
 </html>
