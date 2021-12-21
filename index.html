@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Web Paint!</title>
+    <title>i-Paint!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
     
 <body>
-    <h1>My own paint</h1>
+    <h1>i-Paint</h1>
     <p>Draw anything you want! Enjoy it~~</p>
     <div id="bigest">
-        <canvas id="draw" width="200" height="200">
+        <canvas id="draw" width="200" height="200" style="background-color: white;">
             Your browser does not support the HTML canvas tag.
         </canvas>
         <script src="all.js"></script>
         
         <div>
-            <div>
+            <div id="step1">
                 <h3>1. First step "set background color!"</h3>
                 <h4>Remember to set background color first or your things will be covered!</h4>
-                background color : <input id="bgColor" type="color" value="#ffffff">
-                <input type="button" value="set background color" onclick="backgroundColor()">
+                <div style="margin-top: 8px;">background color : </div><input id="bgColor" type="color" value="#ffffff">
+                <input type="button" value="set background color" onclick="backgroundColor()" style="position: absolute; left: 815px; top: 131px;" id="bt1">
             </div>
             <br>
-            <div>
+            <div id="step2">
                 <h3>2. Second step "choose the size & the color of the pen"</h3>
                 size : <input id="s" type="range" min="0" max="20">
                 <br>
@@ -36,12 +36,12 @@
                 <input type="radio" id="type" name="type" value="eraser" onclick="submit()"> eraser
             </div>
             <br>
-            <div>
+            <div id="step3">
                 <h3>3. Final step!!</h3>
                 <h4>Like your paint? Save it!! Don't like it? Press the button and try again!</h4>
-                <button><a href="#" download="image.jpeg" onclick="this.href=canvas.toDataURL();">download as jpeg</a></button>
+                <button id="bt1"><a href="#" download="image.jpeg" onclick="this.href=canvas.toDataURL();">download as jpeg</a></button>
                 <h4>Don't like it? Press the button and try again!</h4>
-                <input type ="button" value ="clean the canvas" onclick ="clean()">
+                <input type ="button" value ="clean the canvas" onclick ="clean()" id="bt1">
             </div>   
         </div> 
     </div>

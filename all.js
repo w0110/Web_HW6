@@ -4,14 +4,15 @@ var canvas = document.getElementById("draw");
 var ctx = canvas.getContext("2d");
 
 var color;
+var bgcolor;
 var defaultColor = "#000000";
 
 resize();
 
 function startup() {
-  colorWell = document.querySelector("#c");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
+  color = document.querySelector("#c");
+  color.value = defaultColor;
+  color.addEventListener("input", updateFirst, false);
 }
 
 function updateFirst(event) {
@@ -32,9 +33,9 @@ var pos = { x: 0, y: 0 };
 
 // new position from mouse events
 function setPosition(e) {
-  pos.x = e.clientX;
+  pos.x = e.clientX - 120;
   //扣掉上面的高度
-  pos.y = e.clientY - 70;
+  pos.y = e.clientY - 60;
 }
 
 // -----bg color------
@@ -95,6 +96,7 @@ function submit() {
 var image = document.getElementById('draw');
 image.src = canvas.toDataURL();
 
+//此為防君子模式 如果你是小人就看ㄅㄏㄏ~~
 //還想偷看!!!!
 document.onkeydown = function(){
   if(window.event && window.event.keyCode == 123) {
@@ -116,7 +118,7 @@ window.oncontextmenu = function(){
 var h = window.innerHeight,w=window.innerWidth; 
 window.onresize = function () { 
   if (h!= window.innerHeight||w!=window.innerWidth){
-    alert("你做完了嗎?Thanks for using! Bye~~\n還是說你偷用+ +!");
+    alert("Finished!?\nThanks for using! Bye~~\n想要繼續畫畫請重新開一個分頁\n\n還是說你偷用+ +!");
     window.close(); 
     window.location = "about:blank"; 
   } 
