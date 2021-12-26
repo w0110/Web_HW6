@@ -21,7 +21,7 @@
                 <h3>1. First step "set background color!"</h3>
                 <h4>Remember to set background color first or your things will be covered!</h4>
                 <div style="margin-top: 8px;">background color : </div><input id="bgColor" type="color" value="#ffffff">
-                <input type="button" value="set background color" onclick="backgroundColor()" style="position: absolute; left: 815px; top: 131px;" id="bt1">
+                <input type="button" value="set background color" onclick="backgroundColor()" style="position: absolute; left: 830px; top: 145px;" id="bt1">
             </div>
             <br>
             <div id="step2">
@@ -29,14 +29,14 @@
                 size : <input id="s" type="range" min="0" max="20">
                 <br>
                 <h4>Pick a color you like! And start to paint~~</h4>
-                <input type="radio" id="type" name="type" value="pen" onclick="submit()" checked> pen
-                color : <input id="c"type="color" value="#000000">
+                <input type="radio" id="type" name="type" value="pen" onclick="submit()" checked>
+                pen color : <input id="c"type="color" value="#000000">
                 <br>
                 <h4>Want to change somethig?    Try to use the eraser!</h4>
                 <input type="radio" id="type" name="type" value="eraser" onclick="submit()"> eraser
             </div>
-            <br>
-            <div id="step3">
+            <!-- <br> -->
+            <div id="step3" style="position: absolute; top: 410px;">
                 <h3>3. Final step!!</h3>
                 <h4>Like your paint? Save it!! Don't like it? Press the button and try again!</h4>
                 <button id="bt1"><a href="#" download="image.jpeg" onclick="this.href=canvas.toDataURL();">download as jpeg</a></button>

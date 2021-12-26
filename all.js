@@ -35,7 +35,7 @@ var pos = { x: 0, y: 0 };
 function setPosition(e) {
   pos.x = e.clientX - 120;
   //扣掉上面的高度
-  pos.y = e.clientY - 60;
+  pos.y = e.clientY - 70;
 }
 
 // -----bg color------

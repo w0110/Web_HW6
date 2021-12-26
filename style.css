@@ -1,15 +1,20 @@
 body {
-    background-color: #669999;
+    /* background-color: #669999; */
+    background-image: url("https://github.com/w0110/Web-homework/blob/main/210730_feature_spl003_main.jpg?raw=true");
+    background-size: cover;
     margin: 0;
+    font-family: Comic Sans MS, Comic Sans, cursive;
 }
 h1 {
-    color: #ffa105;
+    color: #336699;
     margin: 0;
     margin-left: 150px;
 }
 
 p {
-    color: #FFCC33;
+    /* color: #FFCC33; */
+    /* color: #698383ad; */
+    color: #274a6d;
     margin: 0;
     margin-bottom: 3px;
     margin-left: 130px;
@@ -26,12 +31,13 @@ p {
 }
 
 h3 {
-    color: #ffa105;
-    margin-top: 0;
+    color: #ffe605;
+    margin: 0;
 }
 
 h4 {
-    color: #a18e52;
+    /* color: #a18e52; */
+    color: #FFCC33;
     margin-top: 8px;
     margin-bottom: 5px;
 }
@@ -53,8 +59,8 @@ a {
 
 #bgColor {
     position: absolute;
-    left: 780px;
-    top: 127px;
+    left: 795px;
+    top: 140px;
     margin: 0px;
     -webkit-animation: none;
     -moz-appearance: none;
@@ -76,8 +82,8 @@ a {
 
 #c {
     position: absolute;
-    left: 752px;
-    top: 284px;
+    left: 762px;
+    top: 294px;
     margin: 0px;
     margin: 0px;
     -webkit-animation: none;
@@ -99,7 +105,8 @@ a {
 }
 
 #step1, #step2, #step3{
-    background-color: #B3dee5;
+    /* background-color: #B3dee5; */
+    background-color: rgba(136, 172, 172, 0.8);
     padding: 10px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
