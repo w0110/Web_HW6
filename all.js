@@ -110,7 +110,7 @@ document.onkeydown = function(){
 
 // 禁用右键（防止右键查看源代码） 
 window.oncontextmenu = function(){
-  alert("不給你用右鍵ㄏㄏ!\n看屁看 自己寫辣 還想偷看阿~");
+  alert("用右鍵要幹嘛啊~~!\n是想偷看嗎?ㄎㄎ\n不給你看勒");
   return false;
 } 
 

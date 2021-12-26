@@ -12,8 +12,6 @@ h1 {
 }
 
 p {
-    /* color: #FFCC33; */
-    /* color: #698383ad; */
     color: #274a6d;
     margin: 0;
     margin-bottom: 3px;
@@ -36,7 +34,6 @@ h3 {
 }
 
 h4 {
-    /* color: #a18e52; */
     color: #FFCC33;
     margin-top: 8px;
     margin-bottom: 5px;
@@ -105,7 +102,6 @@ a {
 }
 
 #step1, #step2, #step3{
-    /* background-color: #B3dee5; */
     background-color: rgba(136, 172, 172, 0.8);
     padding: 10px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
