@@ -5,6 +5,7 @@ body {
     margin: 0;
     font-family: Comic Sans MS, Comic Sans, cursive;
 }
+
 h1 {
     color: #336699;
     margin: 0;
@@ -111,8 +112,6 @@ a {
 #step1 {
     padding-bottom: 18px;
 }
-
-
 
 input[type="range"]{
     -webkit-appearance: none;

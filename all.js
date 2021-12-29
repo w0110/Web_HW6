@@ -8,7 +8,6 @@ var bgcolor;
 var defaultColor = "#000000";
 
 resize();
-
 function startup() {
   color = document.querySelector("#c");
   color.value = defaultColor;
@@ -62,7 +61,6 @@ function draw(e) {
 
   ctx.stroke(); // draw it!
 }
-
 
 // add window event listener to trigger when window is resized
 window.addEventListener("resize", resize);
