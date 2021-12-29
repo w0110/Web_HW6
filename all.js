@@ -33,6 +33,7 @@ var pos = { x: 0, y: 0 };
 
 // new position from mouse events
 function setPosition(e) {
+  //扣掉左邊的排版距離
   pos.x = e.clientX - 120;
   //扣掉上面的高度
   pos.y = e.clientY - 70;
@@ -72,11 +73,17 @@ document.addEventListener("mousedown", setPosition);
 document.addEventListener("mouseenter", setPosition);
 
 //F5 重新整理畫面(刷新畫布)
-function clean() { 
-  parent.document.location.reload();
+function clean() {
+  var yes = confirm('Are you sure you want to clean the canvas?\nThis step cannot be recovery!');
+  if (yes) {
+      alert('YES! I want to clean the canvas.');
+      parent.document.location.reload();
+  } else {
+      alert('NO! NO! Go back! Don\'t clean~~~~');
+  }
 }
 
-//------radio----
+//------ radio (choose pen or eraser) ----
 function submit() {
   var Total_Obj = document.getElementsByTagName("INPUT");
   for (var i = 0; i < Total_Obj.length; i++) {
@@ -96,15 +103,27 @@ function submit() {
 var image = document.getElementById('draw');
 image.src = canvas.toDataURL();
 
-//此為防君子模式 如果你是小人就看ㄅㄏㄏ~~
-//還想偷看!!!!
+//當有按鍵被觸發
 document.onkeydown = function(){
-  if(window.event && window.event.keyCode == 123) {
-    alert("不給你用F12ㄏㄏ!\n看屁看 自己寫辣 還想偷看阿~");
-    // window.location = "about:blank"; 
-    event.keyCode = 0;
-    event.returnValue = false;
-    return false;
+  if(window.event && (window.event.keyCode == 123 || window.event.keyCode == 116)) {
+    if (window.event.keyCode == 123) {
+      //此為防君子模式 如果你是小人就看ㄅㄏㄏ~~
+      //還想偷看!!!!
+      alert("不給你用F12ㄏㄏ!\n看屁看 自己寫辣 還想偷看阿~");
+      // window.location = "about:blank"; 
+      event.keyCode = 0;
+      event.returnValue = false;
+      return false;
+    } else if (window.event.keyCode == 116) {
+      //防止不小心按到F5
+      var yes = confirm('Are you sure you want to clean the canvas?\nThis step cannot be recovery!');
+      if (yes) {
+        alert('YES! I want to clean the canvas.');
+        parent.document.location.reload();
+      } else {
+        alert('NO! NO! Go back! Don\'t clean~~~~');
+      }
+    }
   }
 }
 
